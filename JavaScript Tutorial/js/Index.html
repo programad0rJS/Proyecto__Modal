@@ -1,0 +1,89 @@
+<!--
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+</head>
+
+<body>
+    <button id="HolaMujeres">Hola Mundo</button>
+    <button id="HolaHombres">Hola Feos</button>
+
+
+<style>
+
+    #HolaMujeres{
+        background-color: blue;
+        color: white;
+        padding: 20px;
+    } 
+    #HolaHombres{
+        background-color: blue;
+        color: white;
+        padding: 20px;
+    }
+
+    </style>
+
+
+
+
+
+    <script>
+        const HolaMujeres = document.getElementById('HolaMujeres')
+
+        HolaMujeres.addEventListener('click', () => {
+            document.body.style.backgroundColor = "red";
+        })
+
+
+        const HolaHombres = document.getElementById('HolaHombres')
+
+        HolaHombres.addEventListener('click',function() {
+            document.body.style.background = '#20dad4';
+        })
+    </script>
+</body>
+
+</html> 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Ejercicio 288</title>
+</head>
+
+<body>
+    <h1>JavaScript - Ejercicio 288</h1>
+
+    <span>Seleccione su lenguaje favorito:</span><br>
+    <select id="cbxLenguajes" onchange="seleccionarLenguaje();">
+        <option value="JavaScript">JavaScript</option>
+        <option value="C#">C#</option>
+        <option value="Java">Java</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+    </select>
+    <br>
+    <span id="lblLenguajeSeleccionado"></span>
+
+    <script>
+        function seleccionarLenguaje() {
+            let cbxLenguajes = document.getElementById('cbxLenguajes');
+            let lenguaje = cbxLenguajes.value;
+
+            document.getElementById('lblLenguajeSeleccionado').innerText =
+                `Ud. ha seleccionado el lenguaje ${lenguaje}.`;
+        }
+    </script>
+</body>
+
+</html>

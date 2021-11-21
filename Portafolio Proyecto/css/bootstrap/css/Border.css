@@ -1,0 +1,30 @@
+/* 
+h1{
+    margin-left: 99px;
+    color: rebeccapurple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 10px 10px 20px black;
+    text-decoration: underline blue;
+    
+}
+a{
+    margin-left: 99px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+.Border{
+    margin-left: 99px;
+    background: rebeccapurple;
+    color: white;
+    padding: 10px;
+    width: 129px;
+    border-radius: 10px;
+    border-style: dashed;
+}
+iframe{
+    margin-left: 99px;
+    border-radius: 19px;
+} 
+*/

@@ -1,0 +1,2166 @@
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>App</title>
+ </head>
+
+ <body>
+   <button onclick="Ocultar()"
+     style="color: green; background: white; border: 2px solid green; padding: 10px; border-radius: 10px;">Ocultar
+   </button>
+
+   <button onclick="Mostrar()"
+     style="color: green; background: white; border: 2px solid green; padding: 10px; border-radius: 10px;">Mostrar</button>
+
+   <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;" id="Mostrar">
+     Some placeholder content for the collapse component. This panel is hidden by default but revealed <br> when the
+     user activates the relevant trigger.
+   </p>
+   <script>
+     function Ocultar() {
+       const Mostrar = document.getElementById('Mostrar').style.display = 'none';
+
+     }
+
+     function Mostrar() {
+       const Mostrar = document.getElementById('Mostrar').style.display = 'block';
+
+     }
+   </script>
+ </body>
+
+ </html> 
+
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modal</title>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+   <style>
+     body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif; 
+     }
+
+     .Modal {
+       /* display: none; */
+       position: fixed;
+       z-index: 1;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       overflow: auto;
+       background-color: rgb(0, 0, 0);
+
+       background-color: rgba(0, 0, 0, 0.4);
+
+       animation-name: zoom;
+       animation-duration: 0.6s;
+     }
+
+
+
+     @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+
+
+
+     .ModalparteDos {
+       background-color: #fefefe;
+       margin: 15% auto;
+       padding: 20px;
+       border: 1px solid #888;
+       width: 80%;
+       border-radius: 20px;
+       animation: mymove 5s infinite;
+
+     }
+   </style>
+ </head>
+
+ <body>
+   <br><br><br><br>
+   <div>
+     <center>
+       <button style="color: green; background: white; border: 2px solid green; padding: 10px; border-radius: 10px;"
+         onclick="Mostrar()">Mostrar Modal</button>
+     </center>
+   </div>
+   <div id="Modal" class="Modal">
+     <div class="ModalparteDos">
+       <div>
+         <h1>New message to @fat</h1>
+       </div>
+       <div>
+         <label for="Nombre">Nombre:</label>
+         <div>
+           <input type="email" placeholder="Email" style="width: 300px;">
+
+         </div>
+         <div>
+           <label for="Mensajes">Mensajes</label>
+           <div>
+             <textarea cols="30" rows="10"></textarea>
+           </div>
+           <button onclick="document.getElementById('Modal').style.display = 'none'">Ocultar Modal</button>
+
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <script>
+     function Mostrar() {
+       document.getElementById('Modal').style.display = 'block';
+
+     }
+   </script>
+
+ </body>
+
+ </html> 
+
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Spinners</title>
+ </head>
+
+ <body>
+   <div class="Spinners"></div>
+
+   <style>
+     .Spinners {
+       border: 16px solid #f3f3f3;
+       border-radius: 50%;
+       border-top: 16px solid rebeccapurple;
+       width: 20px;
+       height: 20px;
+
+       animation: spin 2s linear infinite;
+     }
+
+     @keyframes spin {
+       0% {
+         transform: rotate(0deg);
+       }
+
+       100% {
+         transform: rotate(360deg);
+       }
+     }
+   </style>
+
+ </body>
+
+ </html>
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html>
+
+ <head>
+   <title>carousel</title>
+   <style>
+     .slide-contenedor {
+       width: 50%;
+       position: relative;
+     }
+
+
+
+     .miSlider img {
+       width: 100%;
+       max-height: 100vh;
+       height: inherit;
+       transition: 2s;
+     }
+
+     .direcciones {
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       font-size: 49px;
+     }
+
+     .direcciones a {
+       color: #fff;
+       display: inline-block;
+       padding: 20px;
+       text-decoration: none;
+     }
+
+     .direcciones a:hover {
+       background: rgba(0, 0, 0, .5);
+       transition: .5s;
+     }
+   </style>
+ </head>
+
+ <body>
+   <div class="slide-contenedor">
+     <div class="miSlider">
+       <img src="https://cdn.pixabay.com/photo/2021/10/13/11/31/couple-6706278_960_720.jpg" alt="">
+
+     </div>
+     <div class="miSlider">
+       <img src="https://cdn.pixabay.com/photo/2021/10/28/20/20/hut-6750482_960_720.jpg" alt="">
+
+     </div>
+     <div class="miSlider">
+       <img src="https://cdn.pixabay.com/photo/2021/09/22/00/28/kitten-6645241_960_720.jpg" alt="">
+
+     </div>
+     <div class="direcciones">
+       <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+       <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+     </div>
+
+   </div>
+   <script>
+     let indice = 1;
+     muestraSlides(indice);
+
+     function avanzaSlide(n) {
+       muestraSlides(indice += n);
+     }
+
+     function posicionSlide(n) {
+       muestraSlides(indice = n);
+     }
+
+
+     function muestraSlides(n) {
+       let i;
+       let slides = document.getElementsByClassName('miSlider');
+
+       if (n > slides.length) {
+         indice = 1;
+       }
+
+       for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = 'none';
+       }
+
+       slides[indice - 1].style.display = 'block';
+
+
+     }
+   </script>
+ </body>
+
+
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App</title>
+  <style>
+    .container {
+      position: relative;
+      width: 50%;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+
+      opacity: 0;
+      transition: .5s ease;
+      background-color: red;
+    }
+
+    .overlay:hover {
+      opacity: 1;
+    }
+
+    .text {
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="container">
+    <img src="https://cdn.pixabay.com/photo/2021/11/11/13/08/leopard-6786267_960_720.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Hello World</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #more {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Read More Read Less Button</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+    lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas
+      nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc
+      sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+      ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum.
+      Sed dapibus pulvinar nibh tempor porta.</span></p>
+  <button onclick="myFunction()" id="myBtn">Read more</button>
+
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="" class="Imgs">
+
+<style>
+  .Imgs {
+    filter: blur(5px);
+    filter: brightness(0.4);
+    filter: contrast(200%);
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(50%);
+    filter: hue-rotate(90deg);
+    filter: invert(75%);
+    filter: opacity(25%);
+    filter: saturate(30%);
+    filter: sepia(60%);
+  }
+</style>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .dropbtn {
+      background-color: red;
+      color: white;
+      padding: 16px;
+      font-size: 19px;
+
+      border: none;
+      font-family: monospace;
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: red;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 66px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; opens</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App</title>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: whitesmoke;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="main">
+    <br>
+    <br>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      display: none;
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <br>
+  <br>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <p>Aprendiendo Navbar</p>
+  <p>Aprendiendo Navbar</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "450px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="https://lh3.googleusercontent.com/ogw/ADea4I7UgwMZ-ssuZF6WhZWRQie4n76nz_Rrxu5ZKw1c=s83-c-mo"
+      alt="Imagenes" style="width: 90px; border-radius: 20px; position: relative; left: 20px;">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/JWx2hAm408k" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div id="main">
+    <h2>Sidenav Push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we
+      add a black see-through background-color to body when the sidenav is opened.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "650px";
+      document.getElementById("main").style.marginRight = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginRight = "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hola Mundo </title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: black;
+
+
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="myNav" class="overlay">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="myNav" class="overlay">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <h2>Fullscreen Overlay Nav Example</h2>
+  <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>  
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      position: relative;
+      width: 50%;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute; 
+      bottom: 0;
+      left: 0; 
+      right: 0; 
+      background-color: #008CBA; 
+      overflow: hidden;  
+      width: 44px;  
+      height: 100%; 
+      transition: .5s ease; 
+    }
+
+    .container:hover .overlay{
+        width: 100%;  
+    }
+
+    .text {
+      color: red;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <br>
+  <br>
+
+  <div class="container">
+    <img src="https://cdn.pixabay.com/photo/2021/11/03/12/28/forest-6765636_960_720.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Hello World :V</div>
+    </div>
+  </div>
+
+</body>
+
+</html> 
+
+
+
+
+
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <title>App + Toast + Fullscreen</title>
+
+  <style>
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <br>
+  <br>
+  <div class="container">
+    <h2>Snackbar / Toast</h2>
+    <p>Snackbars are often used as a tooltips/popups to show a message at the bottom of the screen.</p>
+    <p>Click on the button to show the snackbar. It will disappear after 3 seconds.</p>
+
+    <button onclick="myFunction()">Show Snackbar</button>
+
+    <div id="snackbar">Some text some message..</div>
+  </div>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function () {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Fullscreen with JavaScript</h2>
+    <p>Click on the "Open Fullscreen" button to open this page in fullscreen mode. Close it by either clicking the "Esc"
+      key on your keyboard, or with the "Close Fullscreen" button.</p>
+
+    <button onclick="openFullscreen();">Open Fullscreen</button>
+    <button onclick="closeFullscreen();">Close Fullscreen</button>
+  </div>
+
+  <script>
+    var elem = document.documentElement;
+
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+
+        elem.msRequestFullscreen();
+      }
+    }
+
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+
+        document.msExitFullscreen();
+      }
+    }
+  </script>
+
+
+</body>
+
+</html> 
+
+
+<title>App VideoPlayer</title>
+
+
+
+<button onclick="playPause()">Reproducir/Pausar</button>
+<button onclick="reload()">Recargar</button>
+<button onclick="makeLarge()">Maximizar</button>
+<button onclick="makeSmall()">Minimizar</button>
+<button onclick="makeNormal()">Normal</button>
+<br><br>
+
+<video width="530" height="259"  id="videoPlayer">
+  <source src="Videos.mp4" type="video/mp4">
+
+  Tu navegador no soporta los vídeos de HTML5
+</video>
+
+
+<script>
+  var video = document.getElementById("videoPlayer");
+
+  function playPause() {
+    if (video.paused)
+      video.play();
+    else
+      video.pause();
+  }
+
+  function reload() {
+    video.load();
+  }
+
+  function makeLarge() {
+    video.width = 1000;
+  }
+
+  function makeSmall() {
+    video.width = 250;
+  }
+
+  function makeNormal() {
+    video.width = 500;
+  }
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .Modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+
+    
+    .ModalparteDos {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius: 20px;
+      animation: mymove 5s infinite;
+
+    } 
+  </style>
+</head>
+
+<body>
+  <br><br><br><br>
+  <div>
+    <center>
+      <button style="color: green; background: white; border: 2px solid green; padding: 10px; border-radius: 10px;"
+        onclick="Mostrar()">Mostrar Modal</button> 
+      <img  src="https://cdn.pixabay.com/photo/2021/11/13/12/19/cochem-castle-6791148_960_720.jpg" alt="Snow"
+        style="width:100%;max-width:300px" onclick="Mostrar()" class="Border">
+
+    </center>
+  </div>
+  <div id="Modal" class="Modal">
+ <div class="ModalparteDos">
+      <div>
+        <h1>New message to @fat</h1>
+      </div>
+      <div>
+        <label for="Nombre">Nombre:</label>
+        <div>
+          <input type="email" placeholder="Email" style="width: 300px;">
+
+        </div>
+        <div>
+          <label for="Mensajes">Mensajes</label>
+          <div>
+            <textarea cols="30" rows="10"></textarea>
+          </div>
+          <button onclick="document.getElementById('Modal').style.display = 'none'">Ocultar Modal</button>
+
+        </div>
+      </div> 
+    <center>
+
+
+      <div class="PalabraX" onclick="ocultar()">X</div>
+
+      <img  src="https://cdn.pixabay.com/photo/2020/02/14/15/35/dog-4848668_960_720.jpg" alt="Snow"
+        class="Border_Dos">
+    </center>
+    <style>
+      .Border {
+        position: relative;
+
+        top: 90px;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+
+
+      }
+
+      .Border_Dos {
+        position: relative;
+
+        top: 199px;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+
+
+      }
+
+      .PalabraX {
+        position: absolute;
+        right: 0;
+        color: white;
+        cursor: zoom-in;
+        font-size: 40px;
+
+
+
+      }
+    </style>
+
+  </div>
+  </div>
+
+  <script>
+    function Mostrar() {
+      document.getElementById('Modal').style.display = 'block';
+
+    }
+
+    function ocultar() {
+      document.getElementById('Modal').style.display = 'none';
+
+    }
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Hover</p>
+   <img src="https://cdn.pixabay.com/photo/2020/02/14/15/35/dog-4848668_960_720.jpg" width="600px">
+
+   <style>
+        img:hover{
+          animation: shake 0.5s;
+          animation-iteration-count: infinite;
+        }
+        @keyframes shake {
+              0% { transform: translate(1px, 1px) rotate(0deg); }
+              10% { transform: translate(-1px, -2px) rotate(-1deg); }
+              20% { transform: translate(-3px, 0px) rotate(1deg); }
+              30% { transform: translate(3px, 2px) rotate(0deg); }
+              40% { transform: translate(1px, -1px) rotate(1deg); }
+              50% { transform: translate(-1px, 2px) rotate(-1deg); }
+              60% { transform: translate(-3px, 1px) rotate(0deg); }
+              70% { transform: translate(3px, 1px) rotate(-1deg); }
+              80% { transform: translate(-1px, -1px) rotate(1deg); }
+              90% { transform: translate(1px, 2px) rotate(0deg); }
+              100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+   </style>
+
+</body>
+</html>
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>App</title>
+   <style>
+     .slide-contenedor {
+       width: 50%;
+       position: relative;
+     }
+
+
+
+     .miSlider img {
+       width: 100%;
+       max-height: 100vh;
+       height: inherit;
+       transition: 2s;
+     }
+
+     .direcciones {
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       font-size: 29px;
+     }
+
+     .direcciones a {
+       color: #fff;
+       display: inline-block;
+       padding: 20px;
+       text-decoration: none;
+     }
+
+     .direcciones a:hover {
+       background: rgba(0, 0, 0, .5);
+       transition: .5s;
+     }
+
+     .modal {
+       display: none;
+       /* Hidden by default */
+       position: fixed;
+       /* Stay in place */
+       z-index: 1;
+       /* Sit on top */
+       left: 0;
+       top: 0;
+       width: 100%;
+       /* Full width */
+       height: 100%;
+       /* Full height */
+       overflow: auto;
+       /* Enable scroll if needed */
+       background-color: rgb(0, 0, 0);
+       /* Fallback color */
+       background-color: rgba(0, 0, 0, 0.4);
+       /* Black w/ opacity */
+     }
+
+     /* Modal Content/Box */
+     .modal-content {
+       background-color: #fefefe;
+       margin: 15% auto;
+       /* 15% from the top and centered */
+       padding: 20px;
+       border: 1px solid #888;
+       width: 80%;
+       /* Could be more or less, depending on screen size */
+     }
+
+     /* The Close Button */
+     .close {
+       color: #aaa;
+       float: right;
+       font-size: 58px;
+       font-weight: bold;
+       color: white;
+     }
+
+     .close:hover,
+     .close:focus {
+       color: black;
+       text-decoration: none;
+       cursor: pointer;
+     }
+   </style>
+ </head>
+
+
+ <body>
+
+
+
+   <button id="myBtn"> Modal</button>
+
+
+
+   <div id="myModal" class="modal">
+     <span class="close">&times;</span>
+     <div class="slide-contenedor">
+       <div class="miSlider">
+         <img src="https://cdn.pixabay.com/photo/2021/10/13/11/31/couple-6706278_960_720.jpg" alt="">
+
+       </div>
+       <div class="miSlider">
+         <img src="https://cdn.pixabay.com/photo/2021/10/28/20/20/hut-6750482_960_720.jpg" alt="">
+
+       </div>
+       <div class="miSlider">
+         <img src="https://cdn.pixabay.com/photo/2021/09/22/00/28/kitten-6645241_960_720.jpg" alt="">
+
+       </div>
+       <div class="direcciones">
+         <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+         <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+       </div>
+
+
+     </div>
+
+
+   </div>
+   <script>
+     let indice = 1;
+     muestraSlides(indice);
+
+     function avanzaSlide(n) {
+       muestraSlides(indice += n);
+     }
+
+     function posicionSlide(n) {
+       muestraSlides(indice = n);
+     }
+
+
+     function muestraSlides(n) {
+       let i;
+       let slides = document.getElementsByClassName('miSlider');
+
+       if (n > slides.length) {
+         indice = 1;
+       }
+
+       for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = 'none';
+       }
+
+       slides[indice - 1].style.display = 'block';
+
+
+     }
+     var modal = document.getElementById("myModal");
+
+ 
+     var btn = document.getElementById("myBtn");
+
+    
+     var span = document.getElementsByClassName("close")[0];
+
+
+     btn.onclick = function () {
+       modal.style.display = "block";
+     }
+
+     
+     span.onclick = function () {
+       modal.style.display = "none";
+     }
+   </script>
+ </body>
+
+ </html>
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modal</title>
+   <style>
+     body {
+       font-family: Arial, Helvetica, sans-serif;
+     }
+
+
+     .modal {
+       display: none;
+
+       position: fixed;
+
+       z-index: 1;
+
+       padding-top: 100px;
+
+       left: 0;
+       top: 0;
+       width: 100%;
+
+       height: 100%;
+
+       overflow: auto;
+
+       background-color: rgb(0, 0, 0);
+
+       background-color: rgba(0, 0, 0, 0.4);
+
+     }
+
+
+     .modal-content {
+       background-color: #fefefe;
+       margin: auto;
+       padding: 20px;
+       border: 1px solid #888;
+       width: 80%;
+     }
+
+
+     .close {
+       color: #aaaaaa;
+       float: right;
+       font-size: 28px;
+       font-weight: bold;
+     }
+
+     .close:hover,
+     .close:focus {
+       color: #000;
+       text-decoration: none;
+       cursor: pointer;
+     }
+   </style>
+ </head>
+
+ <body>
+   <h1>Modal Example</h1>
+
+
+   <button id="myBtn">Open Modal</button>
+
+
+   <div id="myModal" class="modal">
+
+
+     <div class="modal-content">
+       <span id="close" class="close">&times;</span>
+       <p>Some text in the Modal..</p>
+     </div>
+
+   </div>
+
+
+
+   <script>
+     var modal = document.getElementById("myModal");
+
+     var btn = document.getElementById("myBtn");
+
+
+     var span = document.getElementById("close");
+
+     btn.onclick = function () {
+       modal.style.display = "block";
+     }
+
+
+     span.onclick = function () {
+       modal.style.display = "none";
+     }
+   </script>
+
+ </body>
+
+ </html>
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modal</title>
+
+
+   <style>
+     body {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+
+     .Modal {
+       /* display: none; */
+       position: fixed;
+       z-index: 1;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       overflow: auto;
+       background-color: rgb(0, 0, 0);
+       background-color: rgba(0, 0, 0, 0.9);
+
+       animation-name: zoom;
+       animation-duration: 0.6s;
+     }
+
+     @keyframes zoom {
+       from {
+         transform: scale(0)
+       }
+
+       to {
+         transform: scale(1)
+       }
+     }
+
+
+
+     .ModalparteDos {
+       background-color: #fefefe;
+       margin: 15% auto;
+       padding: 20px;
+       border: 1px solid #888;
+       width: 80%;
+       border-radius: 20px;
+       animation: mymove 5s infinite;
+
+     }
+   </style>
+ </head>
+
+ <body>
+   <br><br><br><br>
+   <div>
+     <center>
+       <button style="color: green; background: white; border: 2px solid green; padding: 10px; border-radius: 10px;"
+         onclick="Mostrar()">Mostrar Modal</button>
+
+     </center>
+   </div>
+   <div id="Modal" class="Modal">
+     <div class="ModalparteDos">
+       <div>
+         <h1>New message to @fat</h1>
+       </div>
+       <div>
+         <label for="Nombre">Nombre:</label>
+         <div>
+           <input type="email" placeholder="Email" style="width: 300px;">
+
+         </div>
+         <div>
+           <label for="Mensajes">Mensajes</label>
+           <div>
+             <textarea cols="30" rows="10"></textarea>
+           </div>
+           <button onclick="document.getElementById('Modal').style.display = 'none'">Ocultar Modal</button>
+
+         </div>
+       </div>
+
+
+
+     </div>
+   </div>
+
+   <script>
+     function Mostrar() {
+       document.getElementById('Modal').style.display = 'block';
+
+     }
+   </script>
+
+ </body>
+
+ </html>
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modal Left</title>
+
+   <style>
+     body {
+       font-family: Arial, Helvetica, sans-serif;
+     }
+
+
+     .modal {
+       display: none;
+
+       position: fixed;
+
+       z-index: 1;
+
+       padding-top: 100px;
+
+       left: 0;
+       top: 0;
+       width: 100%;
+
+       height: 100%;
+       overflow: auto;
+       background-color: rgb(0, 0, 0);
+       background-color: rgba(0, 0, 0, 0.4);
+
+     }
+
+
+     .modal-content {
+       position: relative;
+       background-color: #fefefe;
+       margin: auto;
+       padding: 0;
+       border: 1px solid #888;
+       width: 80%;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+       animation-name: animatetop;
+       animation-duration: 0.4s
+     }
+
+
+
+     @keyframes animatetop {
+       from {
+         right: -300px;
+         opacity: 0
+       }
+
+       to {
+         right: 0;
+         opacity: 1
+       }
+     }
+
+     .close {
+       color: white;
+       float: right;
+       font-size: 28px;
+       font-weight: bold;
+     }
+
+     .close:hover,
+     .close:focus {
+       color: #000;
+       text-decoration: none;
+       cursor: pointer;
+     }
+
+     .modal-header {
+       padding: 2px 16px;
+       background-color: #5cb85c;
+       color: white;
+     }
+
+     .modal-body {
+       padding: 2px 16px;
+     }
+
+     .modal-footer {
+       padding: 2px 16px;
+       background-color: #5cb85c;
+       color: white;
+     }
+   </style>
+ </head>
+
+ <body>
+
+   <button id="myBtn">Open Modal</button>
+
+
+   <div id="myModal" class="modal">
+
+     <div class="modal-content">
+       <div class="modal-header">
+         <span class="close" id="close">&times;</span>
+         <h2>Modal Header</h2>
+       </div>
+       <div class="modal-body">
+         <p>Some text in the Modal Body</p>
+         <p>Some other text...</p>
+       </div>
+       <div class="modal-footer">
+         <h3>Modal Footer</h3>
+       </div>
+     </div>
+
+   </div>
+
+
+   <script>
+     var modal = document.getElementById("myModal");
+
+
+     var btn = document.getElementById("myBtn");
+
+     var span = document.getElementById("close");
+
+
+     btn.onclick = function () {
+       modal.style.display = "block";
+     }
+     span.onclick = function () {
+       modal.style.display = "none";
+     }
+   </script>
+ </body>
+
+ </html>
+
+
+
+ <!DOCTYPE html>
+ <html lang="es">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <title>Efecto Overlay Zoom a imagen</title>
+   <style>
+     * {
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+     }
+
+     body {
+       background: #1c1c1c;
+
+     }
+
+     .container {
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       max-width: 1100px;
+       margin: auto;
+     }
+
+     .box {
+       width: 300px;
+       height: 400px;
+       position: relative;
+       overflow: hidden;
+       margin: 20px;
+       border: 3px solid #fff;
+     }
+
+     .box img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+
+     .capa {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.5);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: #fff;
+       transform: scale(0);
+       transition: .3s ease;
+     }
+
+     .box:hover .capa {
+       transform: scale(1);
+
+     }
+   </style>
+ </head>
+
+ <body>
+   <div class="container">
+     <div class="box">
+       <a href="#">
+         <img src="https://i.pinimg.com/564x/2f/2b/ae/2f2bae3425719788f4de1e0a5dc09e34.jpg">
+         <div class="capa">
+           <h2>Hola Mundo</h2>
+         </div>
+       </a>
+     </div>
+
+     <div class="box">
+       <a href="#">
+         <img src="https://i.pinimg.com/originals/41/63/1c/41631cafe3b9b737badf52dd428fd74e.jpg">
+         <div class="capa">
+           <h2>Hola Mundo</h2>
+         </div>
+       </a>
+     </div>
+
+     <div class="box">
+       <a href="#">
+         <img src="https://i.pinimg.com/originals/8e/07/74/8e0774d8e79a03476a41214945bccf86.jpg">
+         <div class="capa">
+           <h2>Hola Mundo</h2>
+         </div>
+       </a>
+     </div>
+   </div>
+ </body>
+
+ </html>
+
+ -->
+
+
+
+
+
+
